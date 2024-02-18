@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('show');
+
 
 Auth::routes();
 

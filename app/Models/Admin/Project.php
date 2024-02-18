@@ -9,4 +9,7 @@ class Project extends Model
 {
     use HasFactory;
     protected $table = 'projects';
+    public function type(){
+        return $this->belongsTo(Type::class);
+    }
 }

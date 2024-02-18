@@ -15,7 +15,7 @@ class ProjectSeeder extends Seeder
     public function run(Faker $faker): void
     {
         //
-        for($i=0; $i > 10; $i++){
+        for($i=0; $i < 10; $i++){
             $newProject = new Project();
             $newProject->type_id = rand(0, 10);
             $newProject->name = $faker->word();
